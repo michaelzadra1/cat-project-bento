@@ -26,6 +26,7 @@ import { CatDialogComponent } from './components/cat-dialog/cat-dialog.component
 const routes = [
   { path: '', component: HomePageComponent },
   { path: 'favorites', component: FavoritesPageComponent },
+  { path: '**', redirectTo: '/'}
 ];
 
 @NgModule({
