@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+nav {
+  padding: 20px 40px;
+  margin-bottom: 20px;
+}
+.site-wrapper {
+  margin: 0 auto;
+  max-width: 80%;
+}
+.mat-spinner {
+  margin: 20px auto;
+}
+.card-container {
+  margin: 10px 0;
+}
+.input-container {
+  margin-bottom: 25px;
+}
+app-cat-card {
+  .favorite {
+    padding: 0px 15px;
+
+    .fav-icon {
+      height: 25px;
+      width: 25px;
+      font-size: 25px;
+    }
+  }
+  button:focus {
+    outline: none;
+  }
+}
+.cat-dialog {
+  img {
+    max-width: 500px;
+  }
+}
+

@@ -1,0 +1,11 @@
+<div class="row input-container">
+  <div class="col-4">
+    <button mat-raised-button [routerLink]="['/']">Back to Cats!</button>
+  </div>
+</div>
+<h3 *ngIf="cats.length === 0">No Favorited Cats :(</h3>
+<div class="row justify-content-center" *ngIf="cats.length > 0">
+  <div class="col-4 align-self-start card-container" *ngFor="let cat of cats">
+    <app-cat-card [cat]="cat" (addFavorite)="addCat($event)" (removeFavorite)="removeCat($event)"></app-cat-card>
+  </div>
+</div>
