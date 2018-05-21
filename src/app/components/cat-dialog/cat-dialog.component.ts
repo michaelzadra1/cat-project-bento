@@ -18,7 +18,7 @@ export class CatDialogComponent implements OnInit {
     this.cat = this.data;
   }
 
-  closeDialog(selectedPatient) {
+  closeDialog(): void {
     this.dialogRef.close();
   }
 

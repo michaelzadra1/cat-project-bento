@@ -46,12 +46,14 @@ export class HomePageComponent implements OnInit {
     );
   }
 
+  // gets last word of a cat fact
   getLastWord(fact: string): string {
-    let word = fact.split(" ").pop(); // get last word
+    let word = fact.split(" ").pop();
     word = word.toLowerCase().replace(/[^0-9a-z]/gi, ''); // lowercase & remove non-alphanumeric
     return word;
   }
 
+  // sorts cats by last word of fact
   toggleSort(e: any): void {
     if (e.checked === true) {
       this.cats.sort(this.compare);
@@ -69,6 +71,7 @@ export class HomePageComponent implements OnInit {
     localStorage.setItem("favoritedCats", JSON.stringify(this.favoriteCats));
   }
 
+  // compare function for sorting last word of facts
   compare(a: Cat, b: Cat): number {
     if (a.last_fact_word < b.last_fact_word) {
       return -1;

@@ -15,10 +15,11 @@ export class CatsService {
 
   constructor(private http: HttpClient) { }
 
-  getCatImages() {
+  getCatImages(): Observable<any[]> {
     return this.http.get(this.imagesEndpoint, {responseType: 'text'})
     .map(res => {
         let data;
+        // parse XML document
         xml2js.parseString( res, function (err, result) {
           data = result;
         });
@@ -28,8 +29,10 @@ export class CatsService {
       Observable.throw(error)
     );
   }
-  getCatFacts() {
+
+  getCatFacts(): Observable<any[]> {
     return this.http.get(this.factsEndpoint, {responseType: 'text'})
+    // parse JSON string
     .map( res => JSON.parse(res))
     .catch((error: any) =>
       Observable.throw(error)

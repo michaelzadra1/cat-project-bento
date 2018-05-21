@@ -4,18 +4,14 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-
-
 import { MatInputModule,
   MatProgressSpinnerModule,
   MatButtonModule,
-  MatProgressBarModule,
   MatCardModule,
   MatIconModule,
-  MatCheckboxModule,
-  MatDialogModule
+  MatDialogModule,
+  MatCheckboxModule
  } from '@angular/material';
-
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './views/home-page/home-page.component';
@@ -45,7 +41,7 @@ const routes = [
     HttpClientModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),
-    MatInputModule, MatProgressSpinnerModule, MatButtonModule, MatProgressBarModule, MatProgressBarModule, MatCardModule, MatIconModule, MatCheckboxModule, MatDialogModule
+    MatInputModule, MatProgressSpinnerModule, MatButtonModule, MatCardModule, MatIconModule, MatCheckboxModule, MatDialogModule
 
   ],
   providers: [
